@@ -2,7 +2,7 @@
 
 ## Se mantienen en el repositorio las herramientas de virtualvenv, Django y Pillow ya que fueron customizadas por el Administrador.
 
-## Iniciar virtualenv:
+## Abrir una terminal de Git Bash e iniciar virtualenv:
 
 . venv/Scripts/activate
 
