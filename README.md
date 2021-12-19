@@ -12,6 +12,10 @@ py -m venv venv
 
 pip install django
 
+## Instalar Pillow
+
+python -m pip install Pillow
+
 ## Generar la base de datos:
 
 py manage.py migrate
