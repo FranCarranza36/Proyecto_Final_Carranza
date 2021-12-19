@@ -1,0 +1,20 @@
+{% extends 'AppCoder/index.html' %}
+
+{% block head_block %}
+<title>Editar Avatar</title>
+{% endblock head_block %}
+
+{% block body_block %}
+    {% if mensaje %}
+        <h3 style = "color:rgb(13, 0, 196)">{{mensaje}}</h3>
+    {% endif %}
+
+    <form action= '' method = "POST" enctype="multipart/form-data">
+        {% csrf_token %} 
+        <table>
+            {{form}}
+        </table>
+        <input type = "submit" value="Enviar"/>
+        <img src="{{url}}"/>
+    </form>
+{% endblock body_block %}

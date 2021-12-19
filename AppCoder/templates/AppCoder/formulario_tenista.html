@@ -1,0 +1,18 @@
+{% extends 'AppCoder/index.html' %}
+
+{% block head_block %}
+<title>Crear Tenistas</title>
+{% endblock head_block %}
+
+{% block body_block %}
+
+    <h1>Crear Tenistas</h1>
+    <form action= {% url 'Crear_Tenista' %} method = "POST">
+        {% csrf_token %} 
+        <table>
+            {{formulario.as_table}}
+        </table>
+        <input type = "submit" value="Crear"/>
+    </form>
+    
+{% endblock body_block %}

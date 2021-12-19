@@ -1,0 +1,16 @@
+{% extends 'AppCoder/index.html' %}
+
+{% block head_block %}
+<title>Detalle Tenista</title>
+<a href= {% url 'Tenistas' %}>Ir al listado de Tenistas</a>
+{% endblock head_block %}
+
+{% block body_block %}
+
+<p>
+    <h3 style = color:darkblue>
+        {{tenista}}
+    </h3>
+</p>
+
+{% endblock body_block %}

@@ -1,0 +1,19 @@
+{% extends 'AppCoder/index.html' %}
+
+{% block head_block %}
+<title>Borrar Basquetbolista</title>
+<a href= {% url 'Basquetbolistas' %}>Ir al listado de Basquetbolistas</a>
+{% endblock head_block %}
+
+{% block body_block %}
+
+    <form method = "POST">
+        {% csrf_token %} 
+        <h3 style = color:crimson>
+            ¿Estás seguro de que deseas borrar el basquetbolista "{{object.apellido}} {{object.nombre}}"?
+        </h3>
+        </p>
+        <input type = "submit" value="Borrar"/>
+    </form>
+    
+{% endblock body_block %}

@@ -1,0 +1,20 @@
+{% extends 'AppCoder/index.html' %}
+
+{% block head_block %}
+<title>Login</title>
+<a href= {% url 'Register' %}>Registrarse</a>
+{% endblock head_block %}
+
+{% block body_block %}
+    {% if error_user %}
+        <h3 style = color:red>{{mensaje}}</h3>
+    {% endif %}
+    <form action= '' method = "POST">
+        {% csrf_token %} 
+        <table>
+            {{form}}
+        </table>
+        <input type = "submit" value="Ingresar"/>
+    </form>
+    
+{% endblock body_block %}

@@ -1,0 +1,20 @@
+{% extends 'AppCoder/index.html' %}
+
+{% block head_block %}
+<title>Editar User</title>
+{% endblock head_block %}
+
+{% block body_block %}
+    {% if mensaje %}
+        <h3 style = color:red>{{mensaje}}</h3>
+    {% endif %}
+
+    <form action= '' method = "POST">
+        {% csrf_token %} 
+        <table>
+            {{form}}
+        </table>
+        <input type = "submit" value="Editar"/>
+    </form>
+    
+{% endblock body_block %}

@@ -1,0 +1,43 @@
+{% extends 'AppCoder/index.html' %}
+
+{% block head_block %}
+<title>Basquetbolistas</title>
+<a href= {% url 'Crear_Basquetbolista' %}>Crear Nuevo Basquetbolista</a>
+{% endblock head_block %}
+
+{% block body_block %}
+    <form action= {% url 'Basquetbolistas' %} method = "GET">
+        {% csrf_token %} 
+        <p>
+        <input type = "text" name = 'nombre' placeholder="Nombre a buscar..."/>
+        </p>
+        <p>
+            <input type = "text" name = 'apellido' placeholder="Apellido a buscar..."/>
+        </p>
+        <p>
+            <input type = "text" name = 'triples' placeholder="Triples a buscar..."/>
+        </p>
+        <input type = "submit" value="Buscar"/>
+    </form>
+    <ul>
+        {% if basquetbolistas %} 
+            {% for basquetbolista in basquetbolistas %}
+            <li>
+                <h6 style = "font-weight: normal">
+                    {{basquetbolista.apellido}} {{basquetbolista.nombre}} <a href= "{% url 'Detalle_Basquetbolista' basquetbolista.id %}" >Detalle</a> | <a href= "{% url 'Borrar_Basquetbolista' basquetbolista.id %}" >Borrar</a> | <a href= "{% url 'Actualizar_Basquetbolista' basquetbolista.id %}" >Actualizar</a>
+                </h6>
+            </li>
+            {% endfor %}
+        {% elif error %}
+            <h3 style = "color:red">
+                {{error}}
+            </h3>
+        {% else %}
+            <h3 style = color:darkolivegreen>
+                No se encontraron basquetbolistas
+            </h3>
+            
+        {% endif %}
+    </ul>
+
+{% endblock body_block %}

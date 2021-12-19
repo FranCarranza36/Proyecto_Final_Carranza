@@ -1,0 +1,17 @@
+{% extends 'AppCoder/index.html' %}
+
+{% block head_block %}
+<title>Actualizar Tenista</title>
+<a href= {% url 'Tenistas' %}>Ir al listado de Tenistas</a>
+{% endblock head_block %}
+
+{% block body_block %}
+
+    <form method = "POST">
+        {% csrf_token %} 
+        <table>
+            {{form.as_p}}
+        </table>
+        <input type = "submit" value="Enviar"/>
+    
+{% endblock body_block %}
