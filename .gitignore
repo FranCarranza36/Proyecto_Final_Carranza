@@ -174,4 +174,4 @@ dmypy.json
 cython_debug/
 
 # Media
-!media/.gitkeep
+!media/avatares/empty
