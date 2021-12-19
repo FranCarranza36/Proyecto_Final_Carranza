@@ -38,3 +38,5 @@ py manage.py runserver
 - Una vez logueado, el usuario podrá cargar su propio avatar e incluso modificarlo si así lo desea.
 - Para una ingresar al Panel de Administración de Django, ir a http://127.0.0.1:8000/admin/ o donde corresponda según la IP y puerto del servidor montado.
 - Para conocer más del implementador de la página, se puede utilizar la sección "About me".
+- En la carpeta /Documentos se podrán visualizar 3 casos diferentes que se trabajaron en este proyecto.
+- En la carpeta /Video se podrá visualizar una presentación ejemplo del Proyecto montado en un servidor local.
