@@ -175,3 +175,4 @@ cython_debug/
 
 # Media
 media/avatares/*
+!media/avatares/.gitkeep
