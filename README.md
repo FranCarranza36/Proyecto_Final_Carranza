@@ -1,20 +1,10 @@
 # Pasos a seguir para inicializar la página web:
 
-## Iniciar una terminal de Bash e instalar virtualenv:
-
-py -m venv venv
+## Se mantienen en el repositorio las herramientas de virtualvenv, Django y Pillow ya que fueron customizadas por el Administrador.
 
 ## Iniciar virtualenv:
 
 . venv/Scripts/activate
-
-## Instalar django con el siguiente comando:
-
-pip install django
-
-## Instalar Pillow
-
-python -m pip install Pillow
 
 ## Generar la base de datos:
 
